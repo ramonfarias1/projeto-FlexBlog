@@ -1,17 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
 :root {
-    /*header and footer*/
+    /*Backgrounds*/
     --azul: rgb(18, 42, 178);
     --azulClaro: rgb(44, 112, 255);
+    --cinzaMuitoClaro: rgb(247, 247, 247);
 
     /*Titles and Texts*/
     --cinzaEscuro: rgb(34, 34, 34);
     --cinza: rgb(124, 124, 124);
     --cinzaClaro: rgb(164, 164, 164);
-
-    /*Backgrounds*/
-    --cinzaMuitoClaro: rgb(247, 247, 247);
 }
 
 * {
@@ -25,18 +23,23 @@
     background-color: var(--azul);
 }
 
-.menu-bg {
-    background-color: var(--azulClaro);
-}
-
 .info {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     color: white;
     max-width: 960px;
-    padding: 10px;
     margin: 0 auto;
+}
+
+.info > p, .info > a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.menu-bg {
+    background-color: var(--azulClaro);
 }
 
 .menu {
@@ -46,13 +49,8 @@
     align-items: center;
     color: white;
     max-width: 960px;
-    padding: 15px 0;
+    /* padding: 15px 0; */
     margin: 0 auto;
-}
-
-.info a {
-    color: white;
-    text-decoration: none;
 }
 
 .menu > a {
@@ -60,7 +58,7 @@
     text-decoration: none;
     font-size: 2.25em;
     font-weight: bold;
-    margin: 0 10px;
+    margin: 15px 10px;
 }
 
 .menu ul {
@@ -69,18 +67,21 @@
     list-style-type: none;
 }
 
+.menu ul li {
+    margin: 15px 10px;
+}
+
 .menu ul a {
     color: white;
     text-decoration: none;
     font-size: 1.25em;
-    margin: 0 10px;
 }
 
 .menu ul a:hover {
     color: var(--azul);
 }
 
-main h1 {
+main > h1 {
     font-size: 3em;
     font-weight: bold;
     color: var(--cinzaEscuro);
@@ -140,7 +141,7 @@ hr {
     font-size: 3em;
     font-weight: bold;
     color: var(--cinzaEscuro);
-    margin-bottom: 60px;
+    margin: 60px 10px;
 }
 
 .produtos-img {
@@ -149,7 +150,7 @@ hr {
     align-items: flex-end;
 }
 
-.produtos-img h3 {
+.produtos-img p {
     font-size: 3em;
     font-weight: bold;
     color: var(--cinzaClaro);
@@ -159,20 +160,20 @@ hr {
 
 .produtos-img-purple {
     flex: 1 1 175px;
-    margin: 10px;
     border-top: 10px solid #ae81ff;
+    margin: 10px;
 }
 
 .produtos-img-pink {
     flex: 1 1 175px;
-    margin: 10px;
     border-top: 10px solid #f9265e;
+    margin: 10px;
 }
 
 .produtos-img-blue {
     flex: 1 1 175px;
-    margin: 10px;
     border-top: 10px solid #66d9eb;
+    margin: 10px;
 }
 
 .produtos-img div img {
@@ -182,20 +183,25 @@ hr {
 .planos {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     align-items: flex-end;
     background-color: var(--cinzaMuitoClaro);
     padding: 60px;
+}
+
+@media screen and (max-width: 500px) {
+    .planos {
+        padding: 0;
+    }
 }
 
 .planos div {
     flex: 1;
     border: 5px solid white;
     margin: 10px;
-    padding: 20px;
+    padding: 40px 20px;
 }
 
-.planos div h3 {
+.planos h2 {
     max-width: 300px;
     font-size: 3em;
     font-weight: bold;
@@ -206,7 +212,7 @@ hr {
     padding-bottom: 20px;
 }
 
-.planos div p {
+.planos p {
     max-width: 300px;
     font-size: 3em;
     font-weight: bold;
@@ -214,14 +220,14 @@ hr {
     text-align: center;
     border-bottom: 5px solid white;
     margin: 0 auto;
-    padding: 20px 0;
+    padding: 10px 0;
 }
 
-.planos div sup {
+.planos sup {
     font-size: 1.5rem;
 }
 
-.planos div ul {
+.planos ul {
     max-width: 300px;
     list-style: none;
     font-size: 1.25em;
@@ -232,13 +238,13 @@ hr {
     padding: 20px 0;
 }
 
-.planos div ul li {
+.planos ul li {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.planos div ul li::after {
+.planos ul li::after {
     content: '';
     display: block;
     background-color: #2c70ff;
@@ -247,7 +253,7 @@ hr {
     border-radius: 50%;
 }
 
-.planos div a {
+.planos a {
     max-width: 300px;
     display: block;
     font-size: 2.25em;
@@ -258,4 +264,117 @@ hr {
     border: 5px solid var(--cinzaEscuro);
     margin: 0 auto;
     padding: 15px;
+}
+
+.descricao {
+    max-width: 960px;
+    margin: 60px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.descricao-item {
+    flex: 1 1 300px;
+    margin: 20px 10px;
+}
+
+.descricao-item h2 {
+    font-size: 2.25em;
+    font-weight: bold;
+    color: var(--cinzaClaro);
+    margin-bottom: 20px;
+}
+
+.descricao-item h2::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.descricao-item:nth-of-type(3n+1) h2::before {
+    background-color: #ae81ff;
+}
+
+.descricao-item:nth-of-type(3n+2) h2::before {
+    background-color: #f9265e;
+}
+
+.descricao-item:nth-of-type(3n+3) h2::before {
+    background-color: #66d9eb;
+}
+
+.descricao-item p {
+    font-size: 1.25em;
+    color: var(--cinza);
+    line-height: 1.5em;
+}
+
+.newsletter {
+    padding: 60px calc((100% - 960px) / 2);
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--cinzaMuitoClaro);
+}
+
+.newsletter-item {
+    flex: 1 1 240px;
+    margin: 0 10px;
+}
+
+.newsletter-item h1 {
+    font-size: 3em;
+    font-weight: bold;
+    color: var(--cinzaClaro);
+}
+
+.newsletter-item p {
+    font-size: 1.25em;
+    font-style: italic;
+    color: var(--cinza);
+    line-height: 2em;
+}
+
+.newsletter form {
+    flex: 2 1 260px;
+    margin: 0 10px;
+    align-self: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+input#email {
+    flex: 2 1 260px;
+    font-size: 1.25em;
+    font-style: italic;
+    color: var(--cinza);
+    padding: 15px 10px;
+    border: 5px solid var(--azulClaro);
+    outline: none;
+}
+
+input[value="ASSINAR"] {
+    flex: 1 1 260px;
+    font-size: 2.25em;
+    font-weight: bold;
+    color: white;
+    background-color: var(--azulClaro);
+    padding: 15px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    font-size: 2.25em;
+    color: var(--azul);
+    background-color: var(--azulClaro);
+}
+
+footer p {
+    flex: 1;
+    text-align: center;
 }
