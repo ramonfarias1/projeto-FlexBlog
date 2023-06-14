@@ -4,7 +4,7 @@
 
 ## Sobre📄
 
-Projeto feito no curso de [FlexBox](https://www.origamid.com/curso/css-flexbox/) da Origamid.
+Projeto feito no curso de FlexBox da Origamid.
 
 Um site criado utilizando em sua grande maior parte o modelo de layout FlexBox.
 
