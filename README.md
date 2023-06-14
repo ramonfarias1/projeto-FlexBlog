@@ -1,6 +1,6 @@
 # Projeto Flexblog🤸‍♀️🌐
 
-![GIF do Projeto](https://github.com/ramonfarias1/projeto-flexblog/blob/main/images/interface.gif)
+![GIF Demonstrativo](https://github.com/ramonfarias1/projeto-flexblog/blob/main/images/interface.gif)
 
 ## Sobre📄
 
